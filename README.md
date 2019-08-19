@@ -52,7 +52,7 @@ Filter, Entry, BrCP, Subj, RsSubjFiltAtt, InTerm, OutTerm, RsFiltAtt : used to c
      Python SDK connects to Cisco ACI with REST API, This supports only Json or xml. 
      
  5) Config File:
-     You can write the config in a file. Python will reads the file and construct the json and send to Rest API. The config file can be in any format as per your comfort. We are using YAML format for config file.
+     You can write the config in a file. Python will reads the file and construct the json and send to Rest API. The config file can be in any format as per your comfort. We are using YAML format for config file. 
      
 
 Source : Cisco APIC Python SDK Documentation
