@@ -35,7 +35,7 @@ Filter, Entry, BrCP, Subj, RsSubjFiltAtt, InTerm, OutTerm, RsFiltAtt : used to c
 
 3) Below is the flow to configure Cisco ACI.
 
-1)	Tenent
+1)Tenent
   a)	VRF
     i)	Bridge Domain
      (1)	Subnet/Gateway
