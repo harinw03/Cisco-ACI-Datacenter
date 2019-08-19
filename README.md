@@ -24,7 +24,7 @@ moDir.login()"
 2) Modules required to import are as follows.
 
 MoDirectory : Handels the session info
-LoginSession : used to send user credientals to create session
+LoginSession : used to send user credentials to create session
 ConfigRequest : to commit config 
 Ap : Application profile creation
 AEPg : EPG creation
@@ -47,6 +47,13 @@ Filter, Entry, BrCP, Subj, RsSubjFiltAtt, InTerm, OutTerm, RsFiltAtt : used to c
     i)	Filter entries(ex:port:80)
   d)	Contract
     i)	filters
+    
+ 4) Python SDK connection:
+     Python SDK connects to Cisco ACI with REST API, This supports only Json or xml. 
+     
+ 5) Config File:
+     You can write the config in a file. Python will reads the file and construct the json and send to Rest API. The config file can be in any format as per your comfort. We are using YAML format for config file.
+     
 
 Source : Cisco APIC Python SDK Documentation
 https://cobra.readthedocs.io/en/latest/index.html
