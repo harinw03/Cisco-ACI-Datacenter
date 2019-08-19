@@ -1,0 +1,100 @@
+---
+tenant:
+  DC:
+    vrf: DC_VRF     
+    filter:
+      filter_names:
+        HTTPPort:                # filter name
+          HTTPPort:              # fileter_entry_name
+            dFromPort: 80
+            dToPort: 80
+            sFromPort:
+            sToPort:
+            prot: 6
+            etherT: ip
+            tcp_flag: unspecified
+        HTTPSPort:
+          HTTPSPort:
+            dFromPort: 443
+            dToPort: 443
+            sFromPort:
+            sToPort:
+            prot: 6
+            etherT: ip
+            tcp_flag: unspecified
+        PORT-5666:
+          PORT-5666:
+            dFromPort: 5666
+            dToPort: 5666
+            sFromPort:
+            sToPort:
+            prot: 6
+            etherT: ip
+            tcp_flag: unspecified
+    contract:
+      contract_name_First:              # contract name
+        filter:                # filter name
+          - PORT-5666
+          - HTTPSPort
+      contract_name_Second:
+        filter:
+          - HTTPSPort
+      contract_name_Third:
+        filter:
+          InTerm:
+            - PORT-5666
+            - HTTPSPort
+          OutTerm:
+            - PORT-5666
+            - HTTPPort
+    BD:
+      BD_Names:
+            BD:
+      BD_Names:
+        BD_10_5_200:
+          BD_10_5_200:
+            subnet:
+              ip: 10.5.200.254/24
+              scope: public
+            monitoringpolicy:
+              policyname: default
+        BD_10_5_201:
+          BD_10_5_201:
+            subnet:
+              ip: 10.5.201.254/24
+              scope: public
+            monitoringpolicy:
+              policyname: default
+        BD_10_5_202:
+          BD_10_5_202:
+            subnet:
+              ip: 10.5.202.254/24
+              scope: public
+            monitoringpolicy:
+              policyname: default
+    application_profile:
+      Non-Prod-AP:                       # application name
+        webepg:                     # EPG name
+          bd: 
+            - BD_10_5_200       # bd name
+          RsCons:                   # Consumer contracts go in here
+            - contract_name_First
+            - contract_name_Third
+          RsProv:                   # Producer Contracts go in here
+            - contract_name_Second
+        dbepg:
+          bd: 
+            - BD_10_5_201       # bd name
+          RsCons:
+            - contract_name_Second
+          RsProv:                   # Producer Contracts go in here
+            - contract_name_First
+        Appepg:
+          bd: 
+            - BD_10_5_202       # bd name
+          RsCons:
+            - contract_name_First
+            - contract_name_Third
+          RsProv:                   # Producer Contracts go in here
+            - contract_name_Second                       
+			
