@@ -96,5 +96,4 @@ tenant:
             - contract_name_First
             - contract_name_Third
           RsProv:                   # Producer Contracts go in here
-            - contract_name_Second                       
-			
+            - contract_name_Second
