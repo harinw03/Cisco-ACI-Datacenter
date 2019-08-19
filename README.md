@@ -35,18 +35,17 @@ Filter, Entry, BrCP, Subj, RsSubjFiltAtt, InTerm, OutTerm, RsFiltAtt : used to c
 
 3) Below is the flow to configure Cisco ACI.
 
-•	Tenent
-  o	VRF
-    	Bridge Domain
-      •	Subnet/Gateway
-  o	Application Profile
-    	EPG
-      •	Contract as consumer
-      •	Contract as provider
-  o	Filters
-    	Filter entries(ex:port:80)
-  o	Contract
-    	filters
-
+1)	Tenent
+  a)	VRF
+    i)	Bridge Domain
+     (1)	Subnet/Gateway
+  b)	Application Profile
+    i)	EPG
+     (1)	Contract as consumer
+     (2)	Contract as provider
+  c)	Filters
+    i)	Filter entries(ex:port:80)
+  d)	Contract
+    i)	filters
 
 
