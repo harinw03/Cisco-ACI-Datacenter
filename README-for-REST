@@ -1,4 +1,22 @@
 You can query/create config with Cisco ACI using REST API(Without python SDK).
 
+Summary:
+Using Cisco-ACI-Datacenter/REST-queries scripts to get config infomation from APIC.
 
+You can inspect using "API Inceptor" option while you browse through APIC from web browser. Note the URLs and use them in the REST scripts. 
+
+For Examples:
+Login URL : 
+base_URL + 'aaaLogin.json?gui-token-request=yes'
+
+EPG List : 
+'node/mo/uni/tn-<tenant-name>/ap-<App-profile-name>.json?query-target=children&target-subtree-class=fvAEPg&query-target-filter=eq(fvAEPg.isAttrBasedEPg,"false")'
+
+Single EPG with details of contract: 
+'node/mo/uni/tn-<tenant-name>/ap-<App-profile-name>/epg-' + ename + '.json?query-target=subtree&target-subtree-class=fvRsCons,fvRsProv'
+
+Start using postman app and see the output. GET and POST method are allowed.
+
+You can also go thorugh the below link for more information.
+https://www.cisco.com/c/en/us/td/docs/switches/datacenter/aci/apic/sw/1-x/Operating_ACI/guide/b_Cisco_Operating_ACI/b_Cisco_Operating_ACI_chapter_01100.pdf
 
