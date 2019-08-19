@@ -54,29 +54,29 @@ tenant:
         BD_10_5_200:
           BD_10_5_200:
             subnet:
-              ip: 10.5.200.254/24
+              ip: 192.168.200.254/24
               scope: public
             monitoringpolicy:
               policyname: default
         BD_10_5_201:
           BD_10_5_201:
             subnet:
-              ip: 10.5.201.254/24
+              ip: 192.168.201.254/24
               scope: public
             monitoringpolicy:
               policyname: default
         BD_10_5_202:
           BD_10_5_202:
             subnet:
-              ip: 10.5.202.254/24
+              ip: 192.168.202.254/24
               scope: public
             monitoringpolicy:
               policyname: default
     application_profile:
-      Non-Prod-AP:                       # application name
+      DC-AP:                       # application name
         webepg:                     # EPG name
           bd: 
-            - BD_10_5_200       # bd name
+            - BD_192_168_200       # bd name
           RsCons:                   # Consumer contracts go in here
             - contract_name_First
             - contract_name_Third
@@ -84,14 +84,14 @@ tenant:
             - contract_name_Second
         dbepg:
           bd: 
-            - BD_10_5_201       # bd name
+            - BD_192_168_201       # bd name
           RsCons:
             - contract_name_Second
           RsProv:                   # Producer Contracts go in here
             - contract_name_First
         Appepg:
           bd: 
-            - BD_10_5_202       # bd name
+            - BD_192_168_202       # bd name
           RsCons:
             - contract_name_First
             - contract_name_Third
