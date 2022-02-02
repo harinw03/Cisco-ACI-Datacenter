@@ -58,6 +58,6 @@ Filter, Entry, BrCP, Subj, RsSubjFiltAtt, InTerm, OutTerm, RsFiltAtt : used to c
 Source : Cisco APIC Python SDK Documentation
 https://cobra.readthedocs.io/en/latest/index.html
 
-In my opinion python is more flexible than Ansible. Ansible is easy to start for network engineers. But python gives you more control over your scripts. With this you can put all the Tentant config in one YAML file and it can be version controlled in Git. 
+In my opinion python is more flexible than Ansible. Ansible is easy to start for network engineers. But python gives you more control over your scripts. With this you can put all the Tenant config in one YAML file and it can be version controlled in Git. 
 Complete Datacenter config is done in under 10 seconds!!! 
 Happy Network Coding!!!
